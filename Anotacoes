@@ -1,0 +1,51 @@
+Muda nas configurações globais do git o nome da branch de master (que é o padrão, mas em desuso) para main.
+git config --global init.defaultBranch main
+
+Inicia um projeto git em um diretório
+git init
+
+Inicialização do git, basicamente identifica o usuário que fará as alterações.
+git config --global user.name "Aguinaldo da Silva Sobrinho"
+git config --global user.email "aguinaldo.sis@gmail.com"
+
+Adiciona um arquivo para ser comitado
+git add .     -> adiciona todos os arquivos do diretorio atual
+git add <nome do arquivo>     -> adiciona um arquivo específico.
+git add projeto-*  -> adiciona todos os arquivos que comecem com "projeto-"
+git add <nome da diretorio>  -> adiciona o diretorio e todos os arquivos que estão dentro dele.
+
+
+Mostra o status do projeot
+git status
+
+Mostra as alterações que ocorreram no arquivo desde o ultimo add
+git diff <nome do arquivo>
+
+Situação: seu eu criar um arquivo no projeto, executar o git add no arquivo, apagar o arquivo e depois executar um git commit do projeto, o arquivo eu criei será commitado mesmo que que tenha apagado ele.
+para que isso não ocorra eu preciso, antes de commitar, executar o git rm <nome do arquivo>.
+
+Remover um arquivo que esta sendo rastreado após o git add
+git rm --cached <nome do arquivo>
+
+git rm -r --cached <nome da pasta>
+
+Mostra o histórico dos commits
+git log -> mostra todos os commits que foram realizados
+git log -p -> mostra o que foi alterado em casa commit
+git log -p -2 -> mostra o que foi alterado nos ultimos dois commits
+git log -p -1 <hash do commit> -> mostra o que foi alterado em um commit específico
+git show <hash do commt>  -> mostra o que foi alterado em um commit específico
+
+
+
+
+
+
+
+
+
+
+
+
+
+
