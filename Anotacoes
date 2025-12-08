@@ -1,3 +1,4 @@
+29/11/2025
 Muda nas configurações globais do git o nome da branch de master (que é o padrão, mas em desuso) para main.
 git config --global init.defaultBranch main
 
@@ -35,6 +36,31 @@ git log -p -> mostra o que foi alterado em casa commit
 git log -p -2 -> mostra o que foi alterado nos ultimos dois commits
 git log -p -1 <hash do commit> -> mostra o que foi alterado em um commit específico
 git show <hash do commt>  -> mostra o que foi alterado em um commit específico
+
+06/12/2025
+Configuração de um repositorio remoto no git, usando o github como rempositorio.</br>
+Primeiro passo é criar um conta no github e criar um repositório público.
+Por questões de seguranção o Gihub só permite login via Token ou SSD, nesse caso vamos usar o SSH.
+
+Após a conta criada no GitHub vamos cria as chaves com o e-mail configurado no git e envar para o github.
+Execute os comandos extamente na ordem em que estão:
+
+ssh-keygen -t ed25519 -C "aguinaldo.sis@gmail.com"
+cat ~/.ssh/id_ed25519.pub 
+ssh -T git@github.com
+
+Após o comando cat, vai mostra o código da chave pública no terminal, copie esse código e acesse a seguinte configuração no GitHub:
+settings > SSH and GPG keys
+
+Clique em New SSH Keys e preencha com o conteúdo do cat.
+
+Pronto, feito isso, agora vamos configurar um repositório remoto no Git, para isso execute os seguintes comandos:
+
+git remote add origin git@github.com:aguinaldosis-infra/curso_git_github_ufu-2.git
+git branch -M main
+git push origin main
+
+
 
 
 
