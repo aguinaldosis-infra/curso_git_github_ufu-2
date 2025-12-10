@@ -62,6 +62,25 @@ git push origin main
 
 O endereço "git@github.com:aguinaldosis-infra/curso_git_github_ufu-2.git" a gente consegue quando cria o respositório ou depois do repositório criado atravez do botão <>Code
 
+Branchs
+
+Branchs são linhas de desenvolvimente em aparelo.
+
+para criar uma nova branch:
+ git branch <nome da branch>
+ git branch Aguinaldo
+ git branch Mirian
+No exemplo anterior criamos duas branchs, uma com o nome Aguinaldo e outra com o nome Mírian. Dessa forma dois desenvolvedores podem conduzir o desenvolvimento em paralelo gerando códigos em diferentes funções do projeto.
+após todas as alterações serem comitadas e feito o push para o rempositorio, o encarregado do projeto deve juntar essas alterações na branch principal, a main.
+Para juntar as branchs do desenvolvedores na main utiliza-se os seguintes comandos:
+ git merge Aguinalado main --->> mescla a branch do Aguinaldo
+ git merge Mirian main ---->> mescla a branch da Mirian
+Valer alertar que o comando deve ser executado na branch main, para que as alterações sejam adicionadas.
+Situação hipotética, imagine que a Mirian queira mesclas as alterações que o Aguinaldo fez em sua branch, para isso ela vai executar os seguintes comandos:
+ git checkout Mirian ---> entra na brach dela
+ git merge Aguinaldo Mirian ---> mescla todas as alterações que o Aguinaldo fez.
+Claro que para isso funcionar o Aguinaldo tem que ter feito o push para o repositório e a Mirian tem que ter feito o clone do repositorio após esse push 
+
 
 
 
