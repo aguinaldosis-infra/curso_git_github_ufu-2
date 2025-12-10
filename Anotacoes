@@ -60,6 +60,8 @@ git remote add origin git@github.com:aguinaldosis-infra/curso_git_github_ufu-2.g
 git branch -M main
 git push origin main
 
+O endereço "git@github.com:aguinaldosis-infra/curso_git_github_ufu-2.git" a gente consegue quando cria o respositório ou depois do repositório criado atravez do botão <>Code
+
 
 
 
